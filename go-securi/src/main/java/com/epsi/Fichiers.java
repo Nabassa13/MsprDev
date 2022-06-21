@@ -15,7 +15,7 @@ public class Fichiers
 {
     public ArrayList<String> list_staff = new ArrayList<String>();
     public ArrayList<Agent> list_agents = new ArrayList<Agent>();
-    public String header = "<!DOCTYPE html><html><head><meta charset='utf-8'><link rel='stylesheet' type='text/css' href='../../static/style/css/styles.css'/></head><body><div id='container'><div id='header'><a href='../../templates/index.html'><img style='width: 200px; height:150px;' src='../../logo.png'></a></div></div>";
+    public String header = "<!DOCTYPE html><html><head><meta charset='utf-8'><link rel='stylesheet' type='text/css' href='/var/www/html/go-securi/static/style/css/styles.css'/></head><body><div id='container'><div id='header'><a href='/var/www/html/go-securi/templates/index.html'><img style='width: 200px; height:150px;' src='../../logo.png'></a></div></div>";
     public String footer = "<div id='footer'><p>MSPR DEV - EPSI Lyon</p></div></div></body></html>";
     public final Map<String, String> list_tools = new HashMap<String, String>();
 
@@ -120,7 +120,7 @@ public class Fichiers
             bw.write("<div id='navigation'><ul>");
             for (Agent a : list_agents){
                 bw.write("<li>");
-                bw.write("<a href='C:\\Users\\mmendy\\Desktop\\go-securi\\templates\\" + (a.getFirstname().charAt(0) + a.getName()).toLowerCase() + ".html'>" + a.getFirstname() + " " + a.getName() + "</a>");
+                bw.write("<a href='/var/www/html/go-securi/templates/" + (a.getFirstname().charAt(0) + a.getName()).toLowerCase() + ".html'>" + a.getFirstname() + " " + a.getName() + "</a>");
                 bw.write("</li>\n");
             }
             bw.write("</div>");
