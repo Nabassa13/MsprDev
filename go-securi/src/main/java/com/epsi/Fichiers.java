@@ -21,7 +21,7 @@ public class Fichiers
 
     public void readStaff() throws IOException
     {
-        Scanner s = new Scanner(new File("C:\\Users\\mmendy\\Desktop\\go-securi\\staff.txt"));
+        Scanner s = new Scanner(new File("\\var\\www\\html\\staff.txt"));
         while (s.hasNextLine()){
             list_staff.add(s.nextLine());
         }
