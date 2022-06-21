@@ -113,17 +113,17 @@ public class Fichiers
                 bw.write(o.getTools().get(i));
                 bw.write("</li>");
             }        
-            bw.write("</ul></div>");
-            bw.write("</div></div>");
+            //bw.write("</ul></div>");
+            //bw.write("</div></div>");
 
             //Navigation
-            bw.write("<div id='navigation'><ul>");
-            for (Agent a : list_agents){
-                bw.write("<li>");
-                bw.write("<a href='/var/www/html/go-securi/templates/" + (a.getFirstname().charAt(0) + a.getName()).toLowerCase() + ".html'>" + a.getFirstname() + " " + a.getName() + "</a>");
-                bw.write("</li>\n");
-            }
-            bw.write("</div>");
+            //bw.write("<div id='navigation'><ul>");
+            //for (Agent a : list_agents){
+            //    bw.write("<li>");
+            //    bw.write("<a href='/var/www/html/go-securi/templates/" + (a.getFirstname().charAt(0) + a.getName()).toLowerCase() + ".html'>" + a.getFirstname() + " " + a.getName() + "</a>");
+            //    bw.write("</li>\n");
+            //}
+            //bw.write("</div>");
 
             //Affichage piece identité
             bw.write("<div id='extra'>");
