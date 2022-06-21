@@ -15,7 +15,7 @@ public class Fichiers
 {
     public ArrayList<String> list_staff = new ArrayList<String>();
     public ArrayList<Agent> list_agents = new ArrayList<Agent>();
-    public String header = "<!DOCTYPE html><html><head><meta charset='utf-8'><link rel='stylesheet' type='text/css' href='/var/www/html/go-securi/static/style/css/styles.css'/></head><body><div id='container'><div id='header'><a href='/var/www/html/go-securi/templates/index.html'><img style='width: 200px; height:150px;' src='../../logo.png'></a></div></div>";
+    public String header = "<!DOCTYPE html><html><head><meta charset='utf-8'><link rel='stylesheet' type='text/css' href='/var/www/html/go-securi/static/style/css/styles.css'/></head><body><div id='container'><div id='header'><a href='/go-securi/templates/index.html'><img style='width: 200px; height:150px;' src='/var/www/html/go-securi/logo.png'></a></div></div>";
     public String footer = "<div id='footer'><p>MSPR DEV - EPSI Lyon</p></div></div></body></html>";
     public final Map<String, String> list_tools = new HashMap<String, String>();
 
@@ -80,7 +80,7 @@ public class Fichiers
         //Navigation
         bw.write("<div id='accueil' style='text-align:center'>");
         bw.write("<br>");
-        bw.write("<h2>LISTES AGENTS</h2>");
+        bw.write("<h2>LISTES AGENTS à GO SECURI</h2>");
         bw.write("<ul>");
         for (Agent a : list_agents){
             
