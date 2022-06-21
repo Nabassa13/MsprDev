@@ -96,7 +96,7 @@ public class Fichiers
         
         //PARTIE POUR CHAQUE FICHIER AGENT 
         for (Agent o : list_agents){
-            BufferedWriter bw = new BufferedWriter(new FileWriter(new File("/var/www/html/go-securi/templates/" + (o.getFirstname().charAt(0) + o.getName()).toLowerCase() + ".html")));
+            BufferedWriter bw = new BufferedWriter(new FileWriter(new File("/go-securi/templates/" + (o.getFirstname().charAt(0) + o.getName()).toLowerCase() + ".html")));
             bw.write(header);
 
             //affichage contenu
