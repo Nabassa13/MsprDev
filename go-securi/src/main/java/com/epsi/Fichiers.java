@@ -46,7 +46,7 @@ public class Fichiers
         ArrayList<String> tools;
         
         for(String a : list_staff){
-            BufferedReader s = new BufferedReader(new FileReader("C:\\Users\\mmendy\\Desktop\\go-securi\\" + a + ".txt"));
+            BufferedReader s = new BufferedReader(new FileReader("/var/www/html/go-securi/" + a + ".txt"));
             tools = new ArrayList<>();
             String str;
             int i = 1;
@@ -75,7 +75,7 @@ public class Fichiers
 
     public void writeIndex() throws IOException
     {
-        BufferedWriter bw = new BufferedWriter(new FileWriter(new File("C:\\Users\\mmendy\\Desktop\\go-securi\\templates\\index.html")));
+        BufferedWriter bw = new BufferedWriter(new FileWriter(new File("/var/www/html/go-securi/templates/index.html")));
         bw.write(header);
         //Navigation
         bw.write("<div id='accueil' style='text-align:center'>");
@@ -84,7 +84,7 @@ public class Fichiers
         bw.write("<ul>");
         for (Agent a : list_agents){
             
-            bw.write("<a href='C:\\Users\\mmendy\\Desktop\\go-securi\\templates\\" + (a.getFirstname().charAt(0) + a.getName()).toLowerCase() + ".html'>" + a.getFirstname() + " " + a.getName() + "</a><br><br><br>");
+            bw.write("<a href='/var/www/html/go-securi/templates/" + (a.getFirstname().charAt(0) + a.getName()).toLowerCase() + ".html'>" + a.getFirstname() + " " + a.getName() + "</a><br><br><br>");
             
         }
         bw.write("</div>");
@@ -96,7 +96,7 @@ public class Fichiers
         
         //PARTIE POUR CHAQUE FICHIER AGENT 
         for (Agent o : list_agents){
-            BufferedWriter bw = new BufferedWriter(new FileWriter(new File("C:\\Users\\mmendy\\Desktop\\go-securi\\templates\\" + (o.getFirstname().charAt(0) + o.getName()).toLowerCase() + ".html")));
+            BufferedWriter bw = new BufferedWriter(new FileWriter(new File("/var/www/html/go-securi/templates/" + (o.getFirstname().charAt(0) + o.getName()).toLowerCase() + ".html")));
             bw.write(header);
 
             //affichage contenu
@@ -127,7 +127,7 @@ public class Fichiers
 
             //Affichage piece identité
             bw.write("<div id='extra'>");
-            bw.write("<img style='width:300px; height:200px' src='C:\\Users\\mmendy\\Desktop\\go-securi\\"+(o.getFirstname().charAt(0) + o.getName()).toLowerCase()+".jpg'>");
+            bw.write("<img style='width:300px; height:200px' src='/var/www/html/go-securi/"+(o.getFirstname().charAt(0) + o.getName()).toLowerCase()+".jpg'>");
             bw.write("</div>");
             
             
