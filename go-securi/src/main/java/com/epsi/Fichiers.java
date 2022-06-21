@@ -21,7 +21,7 @@ public class Fichiers
 
     public void readStaff() throws IOException
     {
-        Scanner s = new Scanner(new File("\\var\\www\\html\\staff.txt"));
+        Scanner s = new Scanner(new File("/var/www/html/go-securi/staff.txt"));
         while (s.hasNextLine()){
             list_staff.add(s.nextLine());
         }
@@ -29,7 +29,7 @@ public class Fichiers
     }
 
     public void readTools() throws IOException{
-        BufferedReader r = new BufferedReader(new FileReader("C:\\Users\\mmendy\\Desktop\\go-securi\\liste.txt"));
+        BufferedReader r = new BufferedReader(new FileReader("/var/www/html/go-securi/liste.txt"));
         String strCurrentLine;
         while ((strCurrentLine = r.readLine()) != null){
             list_tools.put(strCurrentLine.split("\t")[0], strCurrentLine.split("\t")[1]);
