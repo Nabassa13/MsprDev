@@ -84,7 +84,7 @@ public class Fichiers
         bw.write("<ul>");
         for (Agent a : list_agents){
             
-            bw.write("<a href='/go-securi/templates/" + (a.getFirstname().charAt(0) + a.getName()).toLowerCase() + ".html'>" + a.getFirstname() + " " + a.getName() + "</a><br><br><br>");
+            bw.write("<a href='/var/www/html/go-securi/templates/" + (a.getFirstname().charAt(0) + a.getName()).toLowerCase() + ".html'>" + a.getFirstname() + " " + a.getName() + "</a><br><br><br>");
             
         }
         bw.write("</div>");
