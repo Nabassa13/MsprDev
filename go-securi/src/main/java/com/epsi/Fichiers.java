@@ -75,16 +75,16 @@ public class Fichiers
 
     public void writeIndex() throws IOException
     {
-        BufferedWriter bw = new BufferedWriter(new FileWriter(new File("/var/www/html/go-securi/templates/index.html")));
+        BufferedWriter bw = new BufferedWriter(new FileWriter(new File("go-securi/templates/index.html")));
         bw.write(header);
         //Navigation
         bw.write("<div id='accueil' style='text-align:center'>");
         bw.write("<br>");
-        bw.write("<h2>AGENTS</h2>");
+        bw.write("<h2>LISTES AGENTS</h2>");
         bw.write("<ul>");
         for (Agent a : list_agents){
             
-            bw.write("<a href='/var/www/html/go-securi/templates/" + (a.getFirstname().charAt(0) + a.getName()).toLowerCase() + ".html'>" + a.getFirstname() + " " + a.getName() + "</a><br><br><br>");
+            bw.write("<a href='/go-securi/templates/" + (a.getFirstname().charAt(0) + a.getName()).toLowerCase() + ".html'>" + a.getFirstname() + " " + a.getName() + "</a><br><br><br>");
             
         }
         bw.write("</div>");
