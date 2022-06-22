@@ -127,7 +127,7 @@ public class Fichiers
 
             //Affichage piece identité
             bw.write("<div id='extra'>");
-            bw.write("<img style='width:300px; height:200px' src='/var/www/html/go-securi/"+(o.getFirstname().charAt(0) + o.getName()).toLowerCase()+".jpg'>");
+            bw.write("<img style='width:300px; height:200px' src='/go-securi/templates"+(o.getFirstname().charAt(0) + o.getName()).toLowerCase()+".jpg'>");
             bw.write("</div>");
             
             
