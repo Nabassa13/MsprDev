@@ -75,7 +75,7 @@ public class Fichiers
 
     public void writeIndex() throws IOException
     {
-        BufferedWriter bw = new BufferedWriter(new FileWriter(new File("/var/www/html/go-securi/templates/index.html")));
+        BufferedWriter bw = new BufferedWriter(new FileWriter(new File("/templates/index.html")));
         bw.write(header);
         //Navigation
         bw.write("<div id='accueil' style='text-align:center'>");
